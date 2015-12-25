@@ -12,8 +12,6 @@ App.room = App.cable.subscriptions.create "RoomChannel",
     @perform 'speak', message: message
 
 $(document).on 'click', '#room_speaker_button', () ->
-  message = $('#room_speaker_text')
-  App.room.speak message.val()
-  message.val('')
+  App.room.speak $('#room_speaker').val()
   return
 

@@ -6,7 +6,8 @@
 
 <form>
   <label>Say something:</label><br>
-  <input type="text" id="room_speaker_text">
+  <input id="room_speaker" type="hidden" name="content">
+  <trix-editor input="room_speaker"></trix-editor>
   <input type="button" value="Send" id="room_speaker_button">
 </form>
 
