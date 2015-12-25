@@ -13,5 +13,8 @@ App.room = App.cable.subscriptions.create "RoomChannel",
 
 $(document).on 'click', '#room_speaker_button', () ->
   App.room.speak $('#room_speaker').val()
+  editor = document.querySelector("trix-editor").editor
+  editor.setSelectedRange([0, Infinity])
+  editor.deleteInDirection("backward")
   return
 
